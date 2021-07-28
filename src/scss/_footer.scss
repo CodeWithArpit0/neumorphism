@@ -1,0 +1,17 @@
+#footer{
+    width: 100%;
+    min-height: 4em;
+    background-color: #fff;
+    padding: 2em 0;
+    flex-direction:column;
+    
+    #footer-logo{
+        border-radius: 8px;
+        text-align: center;
+        
+        a{
+            color: var(--main-color);
+            text-decoration: none;
+        }
+    }
+}
