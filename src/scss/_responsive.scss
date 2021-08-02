@@ -56,26 +56,6 @@
   }
 }
 
-// @media (max-width: 500px) {
-//   #neumorphism-app {
-//     #copied {
-//       left: 26%;
-//     }
-//     #shadow-adjust-box {
-//       margin: 2em 0;
-//       @include volume(350px, 300px);
-//       #preview-container {
-//         @include volume(350px, 300px);
-//       }
-//     }
-
-//     #editor {
-//       width: 24em;
-//       height: 30em;
-//     }
-//   }
-// }
-
 @media (max-width: 500px) {
   #neumorphism-app {
     #copied {
@@ -105,7 +85,7 @@
       #switch-container {
         button {
           @include volume(5em, 2em);
-          font-size: .8em;
+          font-size: 0.8em;
         }
       }
     }

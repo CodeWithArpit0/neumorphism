@@ -163,7 +163,6 @@
       button {
         border: none;
         outline: none;
-        // padding: .5em 1em;
         @include volume(5.4em, 2.2em);
         text-decoration: none;
         color: #fff;
@@ -253,9 +252,3 @@
     }
   }
 }
-
-/* Colors
-          Pink : #f8049c
-          Blue : #5900ff
-          Green : #00f8ff
-      */
