@@ -1,0 +1,63 @@
+#neumorphism-app {
+  @include volume(100%, auto);
+  justify-content: space-evenly;
+
+  #shadow-adjust-box {
+    @include volume(400px, 400px);
+    flex-direction: column;
+
+    #preview-container {
+      @include volume(400px, 400px);
+
+      #preview {
+        width: var(--preview-width);
+        height: var(--preview-height);
+        background: var(--preview-background);
+        border-radius: var(--preview-radius);
+        box-shadow: var(--preview-shadow);
+        margin: 1em 0;
+      }
+    }
+    #light-btn-container {
+      width: 100%;
+      justify-content: space-between;
+
+      span {
+        background: 0 0;
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+        border: 2px solid #fff;
+      }
+
+      #top-left {
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: unset;
+        border-top-left-radius: unset;
+      }
+      #top-right {
+        border-bottom-right-radius: unset;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: unset;
+        border-top-left-radius: unset;
+      }
+      #bottom-left {
+        border-bottom-right-radius: unset;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 30px;
+        border-top-left-radius: unset;
+      }
+      #bottom-right {
+        border-bottom-right-radius: unset;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: unset;
+        border-top-left-radius: 30px;
+      }
+
+      .active-side {
+        background: #00f8ff;
+      }
+    }
+  }
+}

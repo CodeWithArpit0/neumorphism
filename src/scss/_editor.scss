@@ -1,0 +1,260 @@
+#neumorphism-app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1em 0;
+
+  #copied{
+    position: absolute;
+    top: -3.5em;
+    left: 18%;
+    background:#fff;
+    padding: 1em;
+    border-radius: 20px/10px;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .slidedown{
+    animation: 1.4s ease-in 1 slidedown;
+    @keyframes slidedown{
+      0%{
+        top: -3.5em;
+      }
+      50%{
+        top: 2em;
+      }
+      80%{
+        opacity: 1;
+      }
+      100%{
+        opacity: 0;
+        top: -3.5em;
+      }
+    }
+  }
+ 
+  #editor {
+    @include volume(27em, 32em);
+    background: rgba(255, 255, 255, 1);
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0.5em 1em;
+    font-size: 1.1em;
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: 20px/60px;
+    font-weight: 500;
+    font-size: 15px;
+
+    div {
+      width: 100%;
+    }
+
+    #color-option {
+      justify-content: space-evenly;
+
+      #color-selector {
+        @include volume(2.2em, 2.4em);
+        outline: none;
+        border: none;
+        background-color: #fff;
+      }
+
+      #Hex-color {
+        @include volume(6em, unset);
+        text-align: center;
+        outline: none;
+        border: 2px solid var(--main-color);
+        padding: 3px 0;
+        font-weight: bolder;
+        border-radius: 4px;
+
+        &:focus {
+          box-shadow: 0px 0px 3px var(--main-color);
+        }
+      }
+    }
+
+    #range-selector {
+      width: 100%;
+
+      .slide-container {
+        width: 100%;
+        margin: 0.6em 0;
+        justify-content: space-between;
+
+        .slider {
+          width: 79%;
+          /* Override default CSS styles */
+          appearance: none;
+          height: 8px;
+          /* Specified height */
+          border-radius: 50px;
+          background: var(--secondry-color);
+          /* Grey background */
+          outline: none;
+          /* Remove outline */
+          opacity: 1;
+          /* Set transparency (for mouse-over effects on hover) */
+          /* 0.2 seconds transition on hover */
+          transition: opacity 0.2s;
+        }
+
+        /* Mouse-over effects */
+        .slider:hover {
+          opacity: 1;
+          /* Fully shown on mouse-over */
+        }
+
+        /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+        .slider::-webkit-slider-thumb {
+          /* Override default look */
+          appearance: none;
+          width: 18px;
+          /* Set a specific slider handle width */
+          height: 18px;
+          /* Slider handle height */
+          background: var(--main-color);
+          border-radius: 50%;
+          border: 2px solid #000;
+          /* Green background */
+          cursor: pointer;
+          /* Cursor on hover */
+        }
+
+        .tooltip {
+          visibility: hidden;
+          margin: 0 0 0 12px;
+          position: absolute;
+          left: 0;
+          display: inline-block;
+          width: 6em;
+          height: 2em;
+          line-height: 2em;
+          text-align: center;
+          background: var(--secondry-color);
+          border-radius: 4px;
+          color: #fff;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 33%;
+            right: 100%;
+            /* To the left of the tooltip */
+            margin-top: -5px;
+            border-width: 6px;
+            border-style: solid;
+            border-color: transparent var(--secondry-color) transparent
+              transparent;
+          }
+        }
+
+        &:hover .tooltip {
+          visibility: visible;
+        }
+      }
+    }
+
+    #switch-container {
+      width: 100%;
+      justify-content: space-between;
+
+      button {
+        border: none;
+        outline: none;
+        @include volume(5.4em, 2.2em);
+        text-decoration: none;
+        color: #fff;
+        background-color: var(--secondry-color);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        font-weight: bold;
+
+        &:hover {
+          background-color: var(--main-color);
+        }
+      }
+
+      .active {
+        background-color: var(--main-color);
+      }
+    }
+  }
+
+  #code-container {
+    width: 100%;
+    background-color: #1d1f21;
+    border-radius: 4px;
+    overflow: auto;
+    margin: 0.6em 0;
+
+    pre {
+      margin: 0 0.8em;
+      padding: 0.8em 0;
+    }
+    ::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #1d1f21;
+    }
+
+    :-webkit-scrollbar-thumb {
+      background-color: var(--main-color) !important;
+    }
+    pre {
+      color: #c5c8c6;
+      text-shadow: rgba(0, 0, 0, 0.3) 0 1px;
+      text-align: left;
+      white-space: pre;
+      overflow: auto;
+      border-radius: 0.3em;
+      font-size: 13px;
+    }
+  }
+
+  #copy-btn {
+    border: 1px solid black;
+
+    @include volume(100%, 2em);
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 1em;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    outline: none;
+    border: 2px solid var(--main-color);
+
+    &:hover {
+      color: var(--main-color);
+      background: #fff;
+    }
+  }
+
+  #more-info-heading {
+    #read-more {
+      font-weight: 500;
+      margin-top: 1em;
+      a {
+        padding: 2px 8px;
+        background-color: var(--main-color);
+        color: #fff;
+        border-radius: 4px;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+/* Colors
+          Pink : #f8049c
+          Blue : #5900ff
+          Green : #00f8ff
+      */
