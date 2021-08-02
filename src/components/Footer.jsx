@@ -13,7 +13,7 @@ const Facebook = "https://www.facebook.com/shorya.srivastv";
 const Linkdin = "https://www.linkedin.com/in/arpit-saxena-a756a4215/";
 
 // Github link
-const Github = "www.github.com";
+const Github = "https://github.com/CodeWithArpit0/neumorphism";
 
 // Website link
 const WebsiteLink = "https://www.facebook.com";
