@@ -16,7 +16,7 @@ const Linkdin = "https://www.linkedin.com/in/arpit-saxena-a756a4215/";
 const Github = "https://github.com/CodeWithArpit0/neumorphism";
 
 // Website link
-const WebsiteLink = "https://www.facebook.com";
+const WebsiteLink = "https://CodeWithArpit0.github.io/neumorphism";
 
 const Footer = () => {
   return (

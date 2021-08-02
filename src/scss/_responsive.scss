@@ -56,25 +56,25 @@
   }
 }
 
-@media (max-width: 500px) {
-  #neumorphism-app {
-    #copied {
-      left: 26%;
-    }
-    #shadow-adjust-box {
-      margin: 2em 0;
-      @include volume(350px, 300px);
-      #preview-container {
-        @include volume(350px, 300px);
-      }
-    }
+// @media (max-width: 500px) {
+//   #neumorphism-app {
+//     #copied {
+//       left: 26%;
+//     }
+//     #shadow-adjust-box {
+//       margin: 2em 0;
+//       @include volume(350px, 300px);
+//       #preview-container {
+//         @include volume(350px, 300px);
+//       }
+//     }
 
-    #editor {
-      width: 24em;
-      height: 30em;
-    }
-  }
-}
+//     #editor {
+//       width: 24em;
+//       height: 30em;
+//     }
+//   }
+// }
 
 @media (max-width: 500px) {
   #neumorphism-app {
@@ -82,14 +82,15 @@
       left: 24%;
     }
     #shadow-adjust-box {
-      @include volume(310px, 300px);
+      margin: 2em 0;
+      @include volume(330px, 300px);
       #preview-container {
-        @include volume(310px, 300px);
+        @include volume(330px, 300px);
       }
     }
 
     #editor {
-      width: 21em;
+      width: 22.5em;
       height: 30em;
       padding: 0.5em;
 
@@ -98,6 +99,13 @@
           .slider {
             width: 75%;
           }
+        }
+      }
+
+      #switch-container {
+        button {
+          @include volume(5em, 2em);
+          font-size: .8em;
         }
       }
     }
