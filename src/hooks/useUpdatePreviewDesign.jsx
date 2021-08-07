@@ -101,8 +101,32 @@ const useUpdatePreviewDesign = () => {
     lightColor = colorGen(color, parseInt(18));
     backgroundColor = `linear-gradient(${angle}deg, ${lightColor}, ${darkColor})`;
   } else if (shadowMode === "pressed") {
-    shadow = `inset ${positionX} ${positionY} ${blur} ${darkColor},
-              inset -${positionXOpposite} -${positionYOpposite} ${blur} ${lightColor}`;
+    // shadow = `inset ${positionX} ${positionY} ${blur} ${darkColor},
+    //           inset -${positionXOpposite} -${positionYOpposite} ${blur} ${lightColor}`;
+    lightShadow = `inset `.concat(lightShadow);
+    darkShadow = `inset `.concat(darkShadow);
+
+    switch (angle) {
+      case 145:
+        shadow = `${lightShadow},
+                ${darkShadow}`;
+        break;
+      case 225:
+        shadow = `${darkShadow},
+                ${lightShadow}`;
+        break;
+      case 315:
+        shadow = `${lightShadow},
+                ${darkShadow}`;
+        break;
+      case 45:
+        shadow = `${lightShadow},
+                ${darkShadow}`;
+        break;
+      default:
+        shadow = `${lightShadow},
+                ${darkShadow}`;
+    }
   }
 
   // Updating the box-shadow or preview
