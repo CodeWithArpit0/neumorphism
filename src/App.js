@@ -16,7 +16,7 @@ function App() {
   const [CssCode, setCssCode] = useState(initialCssCode);
 
   const [DesignDetails, setDesignDetails] = useState({
-    color: "#5900ff",
+    color: "#0a50ff",
     size: "240",
     radius: "50",
     distance: "10",
